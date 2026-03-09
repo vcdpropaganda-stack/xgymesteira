@@ -357,9 +357,9 @@ img {
 .hero-grid {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(420px, 0.85fr);
+  grid-template-columns: minmax(0, 1.28fr) minmax(400px, 0.72fr);
   align-items: start;
-  gap: 56px;
+  gap: 44px;
   height: auto;
   min-height: 0;
 }
@@ -377,7 +377,7 @@ img {
   gap: 18px;
   justify-content: flex-start;
   align-self: start;
-  max-width: 760px;
+  max-width: none;
 }
 
 .eyebrow {
@@ -434,16 +434,16 @@ img {
 }
 
 .hero-title {
-  font-size: clamp(2.4rem, 4vw, 4.5rem);
-  max-width: 12.4ch;
+  font-size: clamp(2.65rem, 4.2vw, 4.85rem);
+  max-width: 15.4ch;
   line-height: 0.92;
-  text-wrap: pretty;
+  text-wrap: balance;
 }
 
 .hero-text {
-  max-width: 33ch;
-  font-size: 1.02rem;
-  line-height: 1.58;
+  max-width: 40ch;
+  font-size: 1.06rem;
+  line-height: 1.54;
 }
 
 .hero-text,
@@ -1567,10 +1567,10 @@ img {
   }
 
   .hero-title {
-    font-size: clamp(2.25rem, 5.4vw, 3.5rem);
-    max-width: 12.6ch;
+    font-size: clamp(2.35rem, 5vw, 3.85rem);
+    max-width: 14ch;
     line-height: 0.93;
-    text-wrap: pretty;
+    text-wrap: balance;
   }
 
   .device-scene {
