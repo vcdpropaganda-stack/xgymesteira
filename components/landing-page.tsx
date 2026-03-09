@@ -461,24 +461,6 @@ export function LandingPage() {
           </div>
 
           <div className="hero-mobile-media-panel">
-            <button
-              className="hero-mobile-video"
-              type="button"
-              onClick={() => setIsVideoOpen(true)}
-              aria-label="Clique para assistir ao vídeo de apresentação da Body Shape"
-            >
-              <span className="hero-video-card__eyebrow">Vídeo do João</span>
-              <span className="hero-video-card__title">Clique para assistir</span>
-              <span className="hero-video-card__text">
-                Veja uma apresentação rápida da Body Shape na XGYM.
-              </span>
-              <span className="hero-video-card__play">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
-                  <polygon points="8 5 19 12 8 19 8 5" />
-                </svg>
-              </span>
-            </button>
-
             <div className="hero-mobile-stats">
               {heroStats.map((stat) => (
                 <div className="hero-stat-card" key={`mobile-${stat.label}`}>
