@@ -40,69 +40,61 @@ const REEL_EMBED_URL =
   "https://www.instagram.com/reel/DURU-Qgkk10/embed/captioned/";
 
 const heroStats = [
-  { value: "30 min", label: "por sessão", icon: Clock3 },
-  { value: "2 opções", label: "app ou WhatsApp", icon: MessageCircle },
-  { value: "VIP", label: "experiência reservada", icon: ShieldCheck }
+  { value: "30 min", label: "Máximo resultado, metade do tempo", icon: Clock3 },
+  { value: "Tecnologia", label: "Vácuo + Infravermelho", icon: MessageCircle },
+  { value: "VIP", label: "Sala privativa só para você", icon: ShieldCheck }
 ];
 
 const featureCards = [
   {
-    title: "Escolha como quer agendar",
-    text: "Você pode reservar sua sessão pelo app ou falar com a XGYM no WhatsApp, do jeito que for mais fácil para você."
+    title: "Reserve seu Horário VIP",
+    text: "Esqueça a burocracia. Chame no WhatsApp ou use o app, escolha a melhor hora para você e garanta sua sala privativa."
   },
   {
-    title: "Apareça na hora marcada",
-    text: "Sua sessão de 30 minutos na esteira encapsulada já está reservada para você. Ambiente privativo, experiência VIP."
+    title: "A Tecnologia Trabalha por Você",
+    text: "Você faz uma caminhada em ritmo confortável. Enquanto isso, o vácuo e o infravermelho multiplicam a queima calórica e estimulam a circulação nas pernas e abdômen."
   },
   {
-    title: "Saia satisfeito e encaixe na rotina",
-    text: "Formato rápido e prático para quem tem agenda cheia. Fácil de repetir, fácil de manter."
+    title: "Saia Desinchada e Acelerada",
+    text: "O efeito 'Underpressure' age como uma drenagem linfática profunda. Você sai da sessão mais leve e com o metabolismo ativado para o resto do dia."
   }
 ];
 
 const benefitCards = [
   {
     icon: Zap,
-    text: "Agendamento simples e rápido. Escolha entre o app ou o WhatsApp da unidade."
+    text: "Tempo é Dinheiro: Apenas 30 minutos na sua agenda. Você entra, treina, e volta para a sua rotina rapidamente."
   },
   {
     icon: Clock3,
-    text: "Sessão de 30 minutos. Objetivo, feito para quem não tem tempo a perder mas quer resultado."
+    text: "Zero Condicionamento Exigido: Ideal até para quem está sedentário ou não gosta do ambiente de musculação pesada."
   },
   {
     icon: Sparkles,
-    text: "Horário reservado só para você. Privativo, confortável. Você não divide com ninguém."
+    text: "Foco em Celulite e Flacidez: A combinação de vácuo e infravermelho atua exatamente nas áreas onde o treino comum demora muito mais para dar resultado."
   },
   {
     icon: MessageCircleQuestion,
-    text: "Tire dúvidas antes de pagar. Fale direto com a unidade. Só agende quando estiver 100% seguro."
-  },
-  {
-    icon: ShieldCheck,
-    text: "Perfeito para quem está começando. Sem exigência técnica. Você entra, usa e já sente a diferença."
-  },
-  {
-    icon: MapPin,
-    text: "XGYM Jundiaí • SP. Suporte rápido para dúvidas e apoio no agendamento."
+    text: "Atendimento Premium Jundiaí: Você é tratada como VIP do momento que entra até a hora que sai. Suporte total pelo WhatsApp."
   }
 ];
 
 const officialGallery = [
   {
-    title: "Esteira Encapsulada",
-    text: "Veja o equipamento que você vai encontrar na XGYM antes de reservar sua sessão.",
+    title: "Privacidade Absoluta",
+    text: "Treine no seu ritmo, ouvindo sua música ou assistindo sua série, sem olhares curiosos. O ambiente é climatizado e exclusivo para você.",
     image:
       "https://vacuactiv.com/wp-content/uploads/2025/08/bodyshape-treadmill-side-view.jpg"
   },
   {
-    title: "Pressão Negativa",
-    text: "Um dos recursos que fazem da Body Shape uma experiência diferente e mais completa.",
+    title: "Pressão Negativa (Vácuo)",
+    text: "O vácuo estimula intensamente a circulação sanguínea de baixo para cima, agindo como uma drenagem linfática que ataca diretamente a retenção de líquidos e a celulite.",
     image:
       "https://vacuactiv.com/wp-content/uploads/2025/08/bodyshape-underpressure.jpg"
   },
   {
     title: "Módulo Infravermelho",
-    text: "Recurso adicional do equipamento para uma sessão confortável e fácil de encaixar na rotina.",
+    text: "O aquecimento profundo aumenta a temperatura corporal e a vasodilatação. Isso acelera a queima de gordura e promove a renovação celular, melhorando a firmeza da pele.",
     image:
       "https://vacuactiv.com/wp-content/uploads/2025/08/bodyshape-infrared-ir.jpg"
   }
@@ -110,53 +102,48 @@ const officialGallery = [
 
 const realCases = [
   {
-    name: "Tuinara C.",
-    title: "O atendimento é incrível",
-    text: '"O atendimento é incrível, senti que cuidaram de mim do começo ao fim. Saí com uma sensação muito boa e já quero voltar."'
+    name: "Mariana C.",
+    title: "Achei que 30 minutos não fariam diferença",
+    text: '"Achei que 30 minutos não fariam diferença, mas saio suando e me sentindo super desinchada. O ambiente VIP é um bônus incrível para quem tem vergonha de academia!"'
   },
   {
-    name: "Felipe L.",
-    title: "Superou minhas expectativas",
-    text: '"Ambiente top, equipe muito atenciosa. Qualidade de alto nível. Superou minhas expectativas logo na primeira visita."'
+    name: "Fernanda L.",
+    title: "Odiava esteira convencional",
+    text: '"Odiava esteira convencional. Com a Body Shape, o tempo voa. Senti meu metabolismo acelerar e a retenção de líquido sumiu logo nas primeiras sessões."'
   },
   {
-    name: "Bruno L.",
-    title: "Mudou minha rotina",
-    text: '"Mudou minha rotina de verdade. O atendimento é consistente e a experiência valeu cada minuto. Recomendo sem hesitar."'
+    name: "Beatriz L.",
+    title: "O melhor investimento para a minha agenda lotada",
+    text: '"O melhor investimento para a minha agenda lotada. O atendimento é impecável e o infravermelho deixa a pele com um aspecto maravilhoso."'
   }
 ];
 
 const faqs = [
   {
-    question: "O que é a Body Shape?",
+    question: "Tenho claustrofobia. Vou me sentir presa?",
     answer:
-      "É uma esteira encapsulada que combina caminhada com tecnologia de underpressure e infravermelho. A sessão dura 30 minutos, é confortável e fácil de encaixar na rotina, sem exigência física prévia."
+      "De forma alguma! A cápsula da esteira isola apenas da cintura para baixo. Seu tronco, braços e cabeça ficam 100% livres, e você tem o controle total para abrir o equipamento a qualquer momento."
   },
   {
-    question: "Preciso falar com alguém para agendar?",
+    question: "Preciso de roupa específica para usar?",
     answer:
-      "Não necessariamente. Você pode agendar pelo app ou, se preferir, falar diretamente com a XGYM Jundiaí pelo WhatsApp para combinar seu horário."
+      "Recomendamos usar um top ou camiseta e um short de ginástica curto, além de um tênis limpo. É importante que a pele das pernas fique exposta para receber os benefícios diretos do infravermelho e do vácuo."
   },
   {
-    question: "Serve para quem está começando agora?",
+    question: "Quem não tem condicionamento físico pode fazer?",
     answer:
-      "Com certeza. A Body Shape é ideal para quem quer começar sem pressão. Você não precisa de condicionamento prévio nem de nenhum equipamento. Só aparecer no horário marcado."
+      "Com certeza! O exercício é uma caminhada em velocidade controlada por você. A mágica acontece pela tecnologia da máquina, e não pelo seu desgaste físico extremo. É o começo perfeito para sair do sedentarismo."
   },
   {
-    question: "Posso tirar dúvidas antes de comprar?",
+    question: "Qual o valor da sessão?",
     answer:
-      "Pode. Se preferir falar com alguém antes de reservar, a unidade atende pelo WhatsApp e ajuda com as dúvidas de forma rápida."
-  },
-  {
-    question: "Quanto custa a sessão?",
-    answer:
-      "Os valores podem variar conforme pacote e disponibilidade. Você pode consultar pelo app ou confirmar direto com a unidade."
+      "Temos pacotes avulsos e planos mensais que cabem na sua rotina e no seu bolso. Chame nossa equipe no WhatsApp e pergunte sobre a Condição Especial para Primeira Sessão!"
   }
 ];
 
 function DeviceScene() {
   return (
-    <div className="device-scene photo-scene">
+      <div className="device-scene photo-scene">
       <div className="device-orbit device-orbit--one" />
       <div className="device-orbit device-orbit--two" />
       <div className="photo-frame">
@@ -171,7 +158,7 @@ function DeviceScene() {
       </div>
       <div className="floating-chip floating-chip--left">Body Shape</div>
       <div className="floating-chip floating-chip--right">XGYM</div>
-      <div className="floating-chip floating-chip--bottom">Agende no app ou WhatsApp</div>
+      <div className="floating-chip floating-chip--bottom">Garanta sua sessão experimental</div>
     </div>
   );
 }
@@ -208,10 +195,13 @@ function BrandIcon({
 export function LandingPage() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
+  const [activeBenefitIndex, setActiveBenefitIndex] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [unitTapCount, setUnitTapCount] = useState(0);
   const galleryTrackRef = useRef<HTMLDivElement | null>(null);
   const galleryCardRefs = useRef<Array<HTMLElement | null>>([]);
+  const benefitTrackRef = useRef<HTMLDivElement | null>(null);
+  const benefitCardRefs = useRef<Array<HTMLDivElement | null>>([]);
   const unitTapCountRef = useRef(0);
   const unitTapTimeoutRef = useRef<number | null>(null);
 
@@ -252,6 +242,42 @@ export function LandingPage() {
   }, []);
 
   useEffect(() => {
+    const track = benefitTrackRef.current;
+    if (!track) return;
+
+    const updateActiveCard = () => {
+      const trackRect = track.getBoundingClientRect();
+      const trackCenter = trackRect.left + trackRect.width / 2;
+
+      let closestIndex = 0;
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      benefitCardRefs.current.forEach((card, index) => {
+        if (!card) return;
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
+        const distance = Math.abs(cardCenter - trackCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      setActiveBenefitIndex(closestIndex);
+    };
+
+    updateActiveCard();
+    track.addEventListener("scroll", updateActiveCard, { passive: true });
+    window.addEventListener("resize", updateActiveCard);
+
+    return () => {
+      track.removeEventListener("scroll", updateActiveCard);
+      window.removeEventListener("resize", updateActiveCard);
+    };
+  }, []);
+
+  useEffect(() => {
     return () => {
       if (unitTapTimeoutRef.current) {
         window.clearTimeout(unitTapTimeoutRef.current);
@@ -270,6 +296,19 @@ export function LandingPage() {
       block: "nearest"
     });
     setActiveGalleryIndex(nextIndex);
+  };
+
+  const scrollToBenefitCard = (index: number) => {
+    const nextIndex = Math.max(0, Math.min(index, benefitCards.length - 1));
+    const nextCard = benefitCardRefs.current[nextIndex];
+    if (!nextCard) return;
+
+    nextCard.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest"
+    });
+    setActiveBenefitIndex(nextIndex);
   };
 
   const handleScrollToTop = () => {
@@ -325,7 +364,7 @@ export function LandingPage() {
           <a href="#beneficios">Benefícios</a>
           <a href="#faq">FAQ</a>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-            Agendar agora
+            Garantir Minha Sessão Experimental
           </a>
         </nav>
 
@@ -344,14 +383,14 @@ export function LandingPage() {
             href={WHATSAPP_URL}
             target="_blank"
           >
-            Falar no WhatsApp
+            Garantir Minha Sessão Experimental
           </Link>
           <Link
             className="btn btn-primary topbar-action topbar-action--primary"
             href={WHATSAPP_URL}
             target="_blank"
           >
-            Agendar agora
+            Garantir Minha Sessão Experimental
           </Link>
         </div>
       </header>
@@ -392,10 +431,10 @@ export function LandingPage() {
 
             <div className="mobile-menu__actions">
               <Link className="btn btn-primary" href={WHATSAPP_URL} target="_blank" onClick={() => setIsMobileMenuOpen(false)}>
-                Agendar agora
+                Garantir Minha Sessão Experimental
               </Link>
               <Link className="btn btn-secondary" href={WHATSAPP_URL} target="_blank" onClick={() => setIsMobileMenuOpen(false)}>
-                Falar no WhatsApp
+                Garantir Minha Sessão Experimental
               </Link>
             </div>
           </div>
@@ -407,20 +446,19 @@ export function LandingPage() {
           <div className="hero-grid">
             <div className="hero-copy hero-copy--reveal">
             <span className="eyebrow">XGYM Jundiaí • SP</span>
-            <h1 className="hero-title">Body Shape na XGYM.</h1>
+            <h1 className="hero-title">Queime Calorias e Reduza Medidas em Apenas 30 Minutos.</h1>
             <p className="hero-text">
-              Sessão de 30 minutos na esteira encapsulada. Agende pelo app ou
-              pelo WhatsApp da unidade e escolha o melhor horário para você.
+              Conheça a Body Shape: a tecnologia europeia que combina caminhada, vácuo e infravermelho para acelerar seu metabolismo e combater a celulite. Ambiente 100% privativo na XGYM Jundiaí.
             </p>
 
             <div className="location-card">
               <strong>XGYM Jundiaí • SP</strong>
-              <span>Agende pelo app ou fale com a unidade para tirar dúvidas.</span>
+              <span>Ambiente 100% privativo para sua sessão Body Shape.</span>
             </div>
 
             <div className="hero-actions">
               <Link className="btn btn-primary" href={WHATSAPP_URL} target="_blank">
-                Agendar pelo WhatsApp
+                Garantir Minha Sessão Experimental
               </Link>
               <Link className="btn btn-secondary" href="#como-funciona">
                 Como funciona
@@ -451,7 +489,7 @@ export function LandingPage() {
                 Clique para assistir
               </span>
               <span className="hero-video-card__text">
-                Apresentacao da esteira Body Shape na XGYM.
+                Conheça a experiência da Body Shape na XGYM.
               </span>
               <span className="hero-video-card__play">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
@@ -478,10 +516,9 @@ export function LandingPage() {
       <section className="content-section" id="como-funciona">
         <div className="section-heading">
           <span className="eyebrow">Como funciona</span>
-          <h2 className="section-title">Simples assim. Você agenda, aparece e pronto.</h2>
+          <h2 className="section-title">O Segredo por Trás dos 30 Minutos que Equivalem a Horas de Treino.</h2>
           <p className="section-text">
-            Reserve sua sessão pelo app ou, se preferir, fale com a XGYM pelo
-            WhatsApp para confirmar tudo com a unidade.
+            Esqueça as academias lotadas. A Body Shape foi desenhada para entregar resultados rápidos de forma inteligente e sem impacto excessivo.
           </p>
         </div>
 
@@ -499,10 +536,9 @@ export function LandingPage() {
       <section className="content-section" id="galeria-oficial">
         <div className="section-heading">
           <span className="eyebrow">Fotos da Body Shape</span>
-          <h2 className="section-title">Veja como é a Body Shape antes de agendar.</h2>
+          <h2 className="section-title">Tecnologia de Ponta Focada no Seu Resultado.</h2>
           <p className="section-text">
-            Confira fotos reais do equipamento e entenda melhor a experiência que
-            espera por você na XGYM.
+            Entenda por que a Body Shape entrega o que a esteira comum não consegue.
           </p>
         </div>
 
@@ -578,35 +614,70 @@ export function LandingPage() {
       <section className="content-section section-split" id="beneficios">
         <div className="section-heading">
           <span className="eyebrow">Por que escolher</span>
-          <h2 className="section-title">Tudo pensado para facilitar a sua vida.</h2>
+          <h2 className="section-title">Por que a Body Shape é a Escolha Inteligente para a Sua Rotina?</h2>
           <p className="section-text">
-            Você escolhe o canal que for mais prático para reservar.
+            Feito para quem tem agenda cheia, mas não abre mão da saúde e da estética.
           </p>
         </div>
 
         <div className="benefit-layout">
-          <div className="benefit-list">
-            <div className="benefit-swipe-hint" aria-hidden="true">
-              <span>&larr;</span>
-              <span>Arraste para o lado</span>
-              <span>&rarr;</span>
+          <div className="benefit-carousel">
+            <div className="benefit-carousel__controls">
+              <button
+                className="benefit-carousel__arrow"
+                type="button"
+                onClick={() => scrollToBenefitCard(activeBenefitIndex - 1)}
+                aria-label="Benefício anterior"
+              >
+                &larr;
+              </button>
+              <div className="benefit-carousel__dots" aria-label="Navegação dos benefícios">
+                {benefitCards.map((benefit, index) => (
+                  <button
+                    key={benefit.text}
+                    type="button"
+                    className={
+                      index === activeBenefitIndex
+                        ? "benefit-carousel__dot is-active"
+                        : "benefit-carousel__dot"
+                    }
+                    aria-label={`Ir para benefício ${index + 1}`}
+                    onClick={() => scrollToBenefitCard(index)}
+                  />
+                ))}
+              </div>
+              <button
+                className="benefit-carousel__arrow"
+                type="button"
+                onClick={() => scrollToBenefitCard(activeBenefitIndex + 1)}
+                aria-label="Próximo benefício"
+              >
+                &rarr;
+              </button>
             </div>
-            {benefitCards.map((benefit) => (
-              <div className="benefit-row reveal-left" key={benefit.text}>
+            <div className="benefit-list" ref={benefitTrackRef}>
+            {benefitCards.map((benefit, index) => (
+              <div
+                className="benefit-row reveal-left"
+                key={benefit.text}
+                ref={(node) => {
+                  benefitCardRefs.current[index] = node;
+                }}
+              >
                 <span className="benefit-bullet benefit-bullet--icon" aria-hidden="true">
                   <benefit.icon size={16} strokeWidth={2.3} />
                 </span>
                 <p>{benefit.text}</p>
               </div>
             ))}
+            </div>
           </div>
 
           <aside className="experience-card reveal-up">
             <span className="experience-card__label">Unidade XGYM</span>
-            <h3>Agende do jeito que preferir.</h3>
+            <h3>Atendimento premium em Jundiaí.</h3>
             <p>
-              Use o app para reservar com autonomia ou fale com a XGYM Jundiaí
-              pelo WhatsApp se quiser apoio da unidade.
+              Sessão privativa, suporte rápido e atendimento pensado para quem busca resultado com conforto e exclusividade.
             </p>
             <div className="experience-card__stack">
               <div>
@@ -614,12 +685,12 @@ export function LandingPage() {
                 <span>XGYM Jundiaí • SP</span>
               </div>
               <div>
-                <strong>Agendamento</strong>
-                <span>App ou atendimento da unidade</span>
+                <strong>Experiência</strong>
+                <span>Sala privativa só para você</span>
               </div>
               <div>
                 <strong>Suporte</strong>
-                <span>WhatsApp para dúvidas rápidas</span>
+                <span>Atendimento premium pelo WhatsApp</span>
               </div>
             </div>
           </aside>
@@ -708,8 +779,8 @@ export function LandingPage() {
       <section className="content-section" id="casos-reais">
         <div className="section-heading">
           <span className="eyebrow">O que falam da XGYM</span>
-          <h2 className="section-title">Quem foi, recomenda.</h2>
-          <p className="section-text">Relatos reais de quem experimentou a Body Shape na XGYM.</p>
+          <h2 className="section-title">O Que Dizem Nossas Alunas</h2>
+          <p className="section-text">Resultados reais de quem trocou o treino monótono pela inteligência da Body Shape na XGYM.</p>
         </div>
 
         <div className="feature-grid">
@@ -733,9 +804,9 @@ export function LandingPage() {
       <section className="content-section faq-section" id="faq">
         <div className="section-heading">
           <span className="eyebrow">Dúvidas frequentes</span>
-          <h2 className="section-title">Tudo que você quer saber antes de agendar.</h2>
+          <h2 className="section-title">Dúvidas Comuns (Sem Letrinhas Miúdas)</h2>
           <p className="section-text">
-            Se tiver mais alguma dúvida, é só chamar no WhatsApp. A XGYM responde rápido.
+            Ainda está na dúvida? Nós respondemos o que a maioria das pessoas pergunta antes de começar.
           </p>
         </div>
 
@@ -758,14 +829,13 @@ export function LandingPage() {
         <div className="closing-panel">
           <div className="closing-panel__content">
             <span className="eyebrow">Pronto para começar?</span>
-            <h2 className="section-title">Sua sessão está a uma mensagem.</h2>
+            <h2 className="section-title">Dê o Primeiro Passo Rumo ao Seu Novo Corpo.</h2>
             <p className="section-text">
-              Agende pelo app ou fale com a XGYM Jundiaí pelo WhatsApp para
-              confirmar seu melhor horário.
+              Sua sessão VIP na Body Shape XGYM Jundiaí está a uma mensagem de distância. Pare de adiar seus resultados.
             </p>
             <div className="hero-actions">
               <Link className="btn btn-primary" href={WHATSAPP_URL} target="_blank">
-                Falar no WhatsApp agora
+                Garantir Minha Sessão Experimental
               </Link>
             </div>
             <p className="section-text">Atendimento direto com a unidade XGYM Jundiaí • SP</p>

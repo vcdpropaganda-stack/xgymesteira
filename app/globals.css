@@ -680,13 +680,18 @@ img {
   align-items: stretch;
 }
 
+.benefit-carousel {
+  display: grid;
+  gap: 16px;
+}
+
 .benefit-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
-.benefit-swipe-hint {
+.benefit-carousel__controls {
   display: none;
 }
 
@@ -1699,58 +1704,49 @@ img {
     padding: 4px 0 8px;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    position: relative;
   }
 
-  .benefit-swipe-hint {
-    display: inline-flex;
+  .benefit-carousel__controls {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    grid-column: 1 / -1;
-    width: max-content;
-    margin: 0 auto 4px;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 184, 0, 0.14);
-    color: #ffd671;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    white-space: nowrap;
+    justify-content: space-between;
+    gap: 14px;
+    margin: 0 0 4px;
   }
 
-  .benefit-list::before,
-  .benefit-list::after {
-    position: absolute;
-    top: 56%;
-    transform: translateY(-50%);
-    z-index: 2;
-    width: 34px;
-    height: 34px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  .benefit-carousel__arrow {
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    background: rgba(10, 10, 10, 0.72);
-    border: 1px solid rgba(255, 184, 0, 0.18);
-    color: #ffd671;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-light);
     font-size: 1rem;
-    font-weight: 800;
-    pointer-events: none;
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
   }
 
-  .benefit-list::before {
-    content: "←";
-    left: 6px;
+  .benefit-carousel__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
   }
 
-  .benefit-list::after {
-    content: "→";
-    right: 6px;
+  .benefit-carousel__dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.24);
+    cursor: pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease, width 0.25s ease;
+  }
+
+  .benefit-carousel__dot.is-active {
+    width: 22px;
+    background: var(--primary-color);
   }
 
   .benefit-list::-webkit-scrollbar {
