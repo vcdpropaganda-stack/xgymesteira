@@ -461,13 +461,16 @@ img {
   text-align: left;
   border-radius: 26px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
-    linear-gradient(180deg, rgba(8, 8, 8, 0.72), rgba(8, 8, 8, 0.9));
+  background-image:
+    linear-gradient(180deg, rgba(255, 184, 0, 0.08), transparent 26%),
+    linear-gradient(180deg, rgba(6, 6, 6, 0.08) 0%, rgba(6, 6, 6, 0.42) 40%, rgba(6, 6, 6, 0.84) 100%),
+    var(--video-card-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--text-light);
   cursor: pointer;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(12px);
   transition: var(--transition);
 }
 
