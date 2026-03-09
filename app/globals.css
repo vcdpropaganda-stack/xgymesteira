@@ -368,7 +368,7 @@ img {
   position: relative;
   min-height: min(42vw, 460px);
   max-height: 460px;
-  align-self: center;
+  align-self: start;
 }
 
 .hero-copy {
