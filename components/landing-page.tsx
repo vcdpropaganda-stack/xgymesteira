@@ -447,7 +447,6 @@ export function LandingPage() {
               aria-label="Clique para assistir ao vídeo de apresentação da Body Shape"
               style={{ ["--video-card-image" as string]: `url(${VIDEO_CARD_IMAGE_URL})` }}
             >
-              <span className="hero-video-card__eyebrow">Video do Joao</span>
               <span className="hero-video-card__title">
                 Clique para assistir
               </span>

@@ -482,19 +482,6 @@ img {
     0 0 40px rgba(255, 184, 0, 0.16);
 }
 
-.hero-video-card__eyebrow {
-  display: inline-flex;
-  width: fit-content;
-  padding: 7px 10px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.44);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.68rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
 .hero-video-card__title {
   font-size: 1.25rem;
   font-weight: 900;
@@ -1712,6 +1699,7 @@ img {
     padding: 4px 0 8px;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
+    position: relative;
   }
 
   .benefit-swipe-hint {
@@ -1732,6 +1720,37 @@ img {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     white-space: nowrap;
+  }
+
+  .benefit-list::before,
+  .benefit-list::after {
+    position: absolute;
+    top: 56%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(10, 10, 10, 0.72);
+    border: 1px solid rgba(255, 184, 0, 0.18);
+    color: #ffd671;
+    font-size: 1rem;
+    font-weight: 800;
+    pointer-events: none;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
+  }
+
+  .benefit-list::before {
+    content: "←";
+    left: 6px;
+  }
+
+  .benefit-list::after {
+    content: "→";
+    right: 6px;
   }
 
   .benefit-list::-webkit-scrollbar {
@@ -1870,11 +1889,6 @@ img {
 
   .hero-video-card:hover {
     transform: translateY(-3px);
-  }
-
-  .hero-video-card__eyebrow {
-    font-size: 0.58rem;
-    padding: 6px 8px;
   }
 
   .hero-video-card__title {
