@@ -1153,7 +1153,7 @@ img {
   box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   z-index: 999;
 }
 
@@ -1165,6 +1165,35 @@ img {
   border-radius: 50%;
   z-index: -1;
   animation: pulse-whatsapp 2s infinite;
+}
+
+.fab-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  border: 1px solid rgba(255, 184, 0, 0.22);
+  border-radius: 50%;
+  background:
+    linear-gradient(180deg, rgba(255, 184, 0, 0.2), rgba(255, 255, 255, 0.04)),
+    rgba(10, 10, 10, 0.9);
+  color: #ffd671;
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.32),
+    0 0 20px rgba(255, 184, 0, 0.14);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.fab-top:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 184, 0, 0.36);
+  color: var(--text-light);
 }
 
 .video-modal {
@@ -1919,7 +1948,14 @@ img {
     font-size: 1.2rem;
   }
 
-.fab-whatsapp {
+  .fab-whatsapp {
+    width: 54px;
+    height: 54px;
+    left: 14px;
+    bottom: 14px;
+  }
+
+  .fab-top {
     width: 54px;
     height: 54px;
     right: 14px;

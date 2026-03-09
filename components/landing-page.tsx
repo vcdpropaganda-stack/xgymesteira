@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import {
   CarFront,
+  ChevronUp,
   Clock3,
   MapPin,
   Menu,
@@ -274,6 +275,12 @@ export function LandingPage() {
     if (typeof window === "undefined") return;
 
     window.location.href = UBER_URL;
+  };
+
+  const handleScrollToTop = () => {
+    if (typeof window === "undefined") return;
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleUnitEasterEgg = () => {
@@ -839,6 +846,9 @@ export function LandingPage() {
           <path d="M12.031 0C5.383 0 0 5.383 0 12.031c0 2.124.551 4.192 1.597 6.014L.203 24l6.096-1.597C8.106 23.332 10.046 23.86 12.031 23.86c6.648 0 12.031-5.383 12.031-12.031S18.679 0 12.031 0zm0 21.84c-1.782 0-3.527-.478-5.056-1.385l-.362-.214-3.754.985.998-3.662-.235-.374a9.96 9.96 0 0 1-1.545-5.368c0-5.523 4.493-10.016 10.016-10.016 5.522 0 10.015 4.493 10.015 10.016 0 5.523-4.493 10.016-10.015 10.016zm5.5-7.514c-.302-.151-1.782-.88-2.059-.981-.277-.101-.478-.151-.68.151-.201.302-.78 1.006-.956 1.208-.176.201-.352.226-.654.075-1.583-.787-2.651-1.371-3.655-2.613-.257-.319.255-.296.843-1.465.075-.151.038-.277-.019-.378-.057-.101-.68-1.637-.932-2.241-.246-.59-.495-.51-.68-.52h-.578c-.201 0-.528.075-.805.378-.277.302-1.057 1.031-1.057 2.515 0 1.484 1.082 2.918 1.233 3.119.151.201 2.125 3.245 5.145 4.549.719.31 1.28.495 1.717.634.721.229 1.378.196 1.895.119.578-.086 1.782-.729 2.033-1.433.252-.704.252-1.308.176-1.433-.075-.126-.277-.201-.578-.352z" />
         </svg>
       </Link>
+      <button className="fab-top" type="button" onClick={handleScrollToTop} aria-label="Voltar ao início">
+        <ChevronUp size={28} strokeWidth={2.6} />
+      </button>
 
       {isVideoOpen ? (
         <div
