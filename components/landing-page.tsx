@@ -20,7 +20,8 @@ import {
 import { siUber, siWaze } from "simple-icons";
 import { useEffect, useRef, useState } from "react";
 
-const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5511994045454";
+const WHATSAPP_URL =
+  "https://api.whatsapp.com/send/?phone=5511994045454&text=ola%20quero%20agendar%20um%20horraio%20na%20esteira%20bodytech";
 const APP_BOOKING_URL = process.env.NEXT_PUBLIC_BOOKING_APP_URL || WHATSAPP_URL;
 const PHONE_URL = "tel:+5511994045454";
 const PHONE_LABEL = "(11) 99404-5454";
