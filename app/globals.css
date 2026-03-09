@@ -1511,6 +1511,27 @@ img {
     width: 100%;
   }
 
+  .feature-grid {
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .glass-card {
+    min-height: auto;
+    padding: 22px 20px;
+  }
+
+  .glass-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+    line-height: 1.08;
+  }
+
+  .card-index {
+    margin-bottom: 14px;
+    font-size: 0.74rem;
+  }
+
   .footer {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -1718,16 +1739,17 @@ img {
   }
 
   .device-scene {
-    min-height: 360px;
+    min-height: auto;
+    aspect-ratio: 1 / 1.08;
   }
 
   .photo-frame {
-    inset: 12% 2% 10%;
+    inset: 0;
     border-radius: 28px;
   }
 
   .hero-media-stack {
-    min-height: 540px;
+    min-height: auto;
   }
 
   .hero-video-card {
@@ -1740,8 +1762,33 @@ img {
 
   .hero-mobile-media-panel {
     display: grid;
-    gap: 16px;
-    margin-top: 18px;
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .floating-chip {
+    padding: 11px 14px;
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+  }
+
+  .floating-chip--left {
+    top: 18px;
+    left: 14px;
+  }
+
+  .floating-chip--right {
+    top: 18px;
+    right: 14px;
+  }
+
+  .floating-chip--bottom {
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: calc(100% - 28px);
+    text-align: center;
   }
 
   .hero-mobile-video {
@@ -1865,10 +1912,49 @@ img {
     font-size: 1.2rem;
   }
 
-  .fab-whatsapp {
+.fab-whatsapp {
     width: 54px;
     height: 54px;
     right: 14px;
     bottom: 14px;
+  }
+}
+
+@media (max-width: 430px) {
+  .topbar {
+    grid-template-columns: 86px minmax(0, 1fr);
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  .brand-logo {
+    min-width: 86px;
+  }
+
+  .brand-logo__image {
+    height: 34px;
+  }
+
+  .topbar-actions {
+    gap: 8px;
+  }
+
+  .topbar-menu-toggle,
+  .topbar-action {
+    min-height: 38px;
+    border-radius: 13px;
+  }
+
+  .topbar-menu-toggle {
+    padding: 9px 11px;
+    gap: 7px;
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+  }
+
+  .topbar-action {
+    padding: 9px 11px;
+    font-size: 0.7rem;
+    letter-spacing: 0.02em;
   }
 }
