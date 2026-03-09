@@ -4,10 +4,26 @@ import { useEffect, useMemo, useState } from "react";
 
 const OPEN_EVENT = "xgym:open-gtm-config";
 const ADMIN_PASSWORD = "vcd007";
+const LOCAL_STORAGE_KEY = "xgym_gtm_id";
 
 function sanitizeGtmId(value: string) {
   const normalized = value.trim().toUpperCase();
   return /^GTM-[A-Z0-9]+$/.test(normalized) ? normalized : "";
+}
+
+function loadLocalGtmId() {
+  if (typeof window === "undefined") return "";
+  return sanitizeGtmId(window.localStorage.getItem(LOCAL_STORAGE_KEY) || "");
+}
+
+function persistLocalGtmId(gtmId: string) {
+  if (typeof window === "undefined") return;
+  if (gtmId) {
+    window.localStorage.setItem(LOCAL_STORAGE_KEY, gtmId);
+    return;
+  }
+
+  window.localStorage.removeItem(LOCAL_STORAGE_KEY);
 }
 
 function removeExistingGtm() {
@@ -55,6 +71,14 @@ export function GTMManager() {
 
   useEffect(() => {
     const loadServerGtm = async () => {
+      const localId = loadLocalGtmId();
+
+      if (localId) {
+        setSavedId(localId);
+        setGtmId(localId);
+        injectGtm(localId);
+      }
+
       try {
         const response = await fetch("/api/gtm", { cache: "no-store" });
         if (!response.ok) return;
@@ -65,6 +89,7 @@ export function GTMManager() {
         if (persistedId) {
           setSavedId(persistedId);
           setGtmId(persistedId);
+          persistLocalGtmId(persistedId);
           injectGtm(persistedId);
         }
       } catch {
@@ -125,16 +150,25 @@ export function GTMManager() {
       });
 
       if (!response.ok) {
-        setFeedback("Não foi possível salvar o GTM no servidor.");
+        injectGtm(sanitizedId);
+        persistLocalGtmId(sanitizedId);
+        setSavedId(sanitizedId);
+        setGtmId(sanitizedId);
+        setFeedback(`GTM ${sanitizedId} ativado localmente neste navegador.`);
         return;
       }
 
       injectGtm(sanitizedId);
+      persistLocalGtmId(sanitizedId);
       setSavedId(sanitizedId);
       setGtmId(sanitizedId);
       setFeedback(`GTM ${sanitizedId} ativado no site.`);
     } catch {
-      setFeedback("Falha ao conectar com o servidor do site.");
+      injectGtm(sanitizedId);
+      persistLocalGtmId(sanitizedId);
+      setSavedId(sanitizedId);
+      setGtmId(sanitizedId);
+      setFeedback(`GTM ${sanitizedId} ativado localmente neste navegador.`);
     } finally {
       setIsBusy(false);
     }
@@ -155,16 +189,25 @@ export function GTMManager() {
       });
 
       if (!response.ok) {
-        setFeedback("Não foi possível remover o GTM do servidor.");
+        removeExistingGtm();
+        persistLocalGtmId("");
+        setSavedId("");
+        setGtmId("");
+        setFeedback("Configuração do GTM removida deste navegador.");
         return;
       }
 
       removeExistingGtm();
+      persistLocalGtmId("");
       setSavedId("");
       setGtmId("");
       setFeedback("Configuração do GTM removida do site.");
     } catch {
-      setFeedback("Falha ao conectar com o servidor do site.");
+      removeExistingGtm();
+      persistLocalGtmId("");
+      setSavedId("");
+      setGtmId("");
+      setFeedback("Configuração do GTM removida deste navegador.");
     } finally {
       setIsBusy(false);
     }
@@ -201,8 +244,8 @@ export function GTMManager() {
           ) : (
             <>
               <p className="gtm-modal__text">
-                Cadastre o ID no formato <strong>GTM-XXXXXXX</strong>. Ele fica salvo neste navegador e é carregado em
-                todo o site.
+                Cadastre o ID no formato <strong>GTM-XXXXXXX</strong>. Quando o servidor estiver disponível, ele vale
+                para o site inteiro. Se não estiver, o GTM fica ativo neste navegador.
               </p>
               <input
                 className="gtm-modal__input"
