@@ -32,7 +32,7 @@ const WAZE_URL =
 const GOOGLE_MAPS_EMBED_URL =
   "https://www.google.com/maps?q=R.%20Prof.%20Jo%C3%A3o%20Batista%20Curado%2C%2040%20-%20Vila%20Virg%C3%ADnia%2C%20Jundia%C3%AD%20-%20SP%2C%2013209-020&z=16&output=embed";
 const UBER_URL =
-  "uber://riderequest?pickup=my_location&dropoff[nickname]=XGYM%20Jundia%C3%AD&dropoff[formatted_address]=R.%20Prof.%20Jo%C3%A3o%20Batista%20Curado%2C%2040%20-%20Vila%20Virg%C3%ADnia%2C%20Jundia%C3%AD%20-%20SP%2C%2013209-020";
+  "https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[nickname]=XGYM%20Jundia%C3%AD&dropoff[formatted_address]=R.%20Prof.%20Jo%C3%A3o%20Batista%20Curado%2C%2040%20-%20Vila%20Virg%C3%ADnia%2C%20Jundia%C3%AD%20-%20SP%2C%2013209-020";
 const HERO_IMAGE_URL =
   "https://s2-glamour.glbimg.com/job41fcQGd8aF7vUcRTzcRRO0HU=/0x0:1300x1109/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_ba3db981e6d14e54bb84be31c923b00c/internal_photos/bs/2023/y/4/ziK9nkTHSAW2VYcPLrDw/esteira.jpg";
 const REEL_EMBED_URL =
@@ -269,12 +269,6 @@ export function LandingPage() {
       block: "nearest"
     });
     setActiveGalleryIndex(nextIndex);
-  };
-
-  const handleUberClick = () => {
-    if (typeof window === "undefined") return;
-
-    window.location.href = UBER_URL;
   };
 
   const handleScrollToTop = () => {
@@ -698,10 +692,10 @@ export function LandingPage() {
                   <BrandIcon path={siWaze.path} label="Waze" />
                   Abrir no Waze
                 </Link>
-                <button className="btn btn-primary location-action" type="button" onClick={handleUberClick}>
+                <Link className="btn btn-primary location-action" href={UBER_URL} target="_blank" rel="noreferrer">
                   <BrandIcon path={siUber.path} label="Uber" />
                   Ir de Uber
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -816,10 +810,10 @@ export function LandingPage() {
                 <BrandIcon path={siWaze.path} label="Waze" />
                 Abrir no Waze
               </Link>
-              <button className="btn btn-secondary location-action" type="button" onClick={handleUberClick}>
+              <Link className="btn btn-secondary location-action" href={UBER_URL} target="_blank" rel="noreferrer">
                 <BrandIcon path={siUber.path} label="Uber" />
                 Ir de Uber
-              </button>
+              </Link>
             </div>
           </aside>
         </div>
