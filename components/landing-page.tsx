@@ -734,6 +734,13 @@ export function LandingPage() {
           {realCases.map((caseItem) => (
             <article className="glass-card reveal-up" key={caseItem.name}>
               <span className="card-index">{caseItem.name}</span>
+              <div className="review-stars" aria-label="Avaliação de 5 estrelas">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
               <h3>{caseItem.title}</h3>
               <p>{caseItem.text}</p>
             </article>
