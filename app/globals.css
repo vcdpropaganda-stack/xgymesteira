@@ -677,20 +677,29 @@ img {
   grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
   gap: 30px;
   margin-top: 42px;
+  align-items: stretch;
 }
 
 .benefit-list {
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .benefit-row {
   display: grid;
   grid-template-columns: 34px minmax(0, 1fr);
   align-items: start;
-  gap: 18px;
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  align-content: start;
+  gap: 16px;
+  min-height: 148px;
+  padding: 22px 20px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+    rgba(18, 18, 18, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
 }
 
 .benefit-bullet {
@@ -720,14 +729,17 @@ img {
 }
 
 .benefit-row p {
-  max-width: 58ch;
-  padding-top: 2px;
+  max-width: none;
+  margin: 0;
+  padding-top: 1px;
+  font-size: 0.98rem;
+  line-height: 1.62;
 }
 
 .experience-card {
   padding: 28px;
   border-radius: 24px;
-  align-self: start;
+  align-self: stretch;
 }
 
 .location-panel {
@@ -1381,6 +1393,14 @@ img {
   .location-grid,
   .location-layout {
     grid-template-columns: 1fr;
+  }
+
+  .benefit-list {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-row {
+    min-height: auto;
   }
 
   .hero-grid {
