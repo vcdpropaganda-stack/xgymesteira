@@ -1685,6 +1685,36 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .benefit-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 86%;
+    grid-template-columns: none;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 4px 0 8px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .benefit-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .benefit-row {
+    min-height: 0;
+    padding: 18px 18px 20px;
+    scroll-snap-align: center;
+    grid-template-columns: 34px minmax(0, 1fr);
+    transform: scale(0.97);
+    opacity: 0.92;
+  }
+
+  .benefit-row p {
+    font-size: 0.92rem;
+    line-height: 1.58;
+  }
+
   .gallery-coverflow {
     overflow: hidden;
   }
