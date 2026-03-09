@@ -21,6 +21,7 @@ import { siUber, siWaze } from "simple-icons";
 import { useEffect, useRef, useState } from "react";
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5511994045454";
+const APP_BOOKING_URL = process.env.NEXT_PUBLIC_BOOKING_APP_URL || WHATSAPP_URL;
 const PHONE_URL = "tel:+5511994045454";
 const PHONE_LABEL = "(11) 99404-5454";
 const XGYM_ADDRESS =
@@ -194,6 +195,7 @@ function BrandIcon({
 
 export function LandingPage() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isBookingChooserOpen, setIsBookingChooserOpen] = useState(false);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
   const [activeBenefitIndex, setActiveBenefitIndex] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -378,22 +380,14 @@ export function LandingPage() {
             <Menu size={18} strokeWidth={2.4} />
             Menu
           </button>
-          <Link
-            className="btn btn-secondary topbar-action topbar-action--secondary"
-            href={WHATSAPP_URL}
-            target="_blank"
-          >
-            <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
-            <span className="cta-label cta-label--short">Garantir Sessão</span>
-          </Link>
-          <Link
+          <button
             className="btn btn-primary topbar-action topbar-action--primary"
-            href={WHATSAPP_URL}
-            target="_blank"
+            type="button"
+            onClick={() => setIsBookingChooserOpen(true)}
           >
             <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
             <span className="cta-label cta-label--short">Garantir Sessão</span>
-          </Link>
+          </button>
         </div>
       </header>
 
@@ -432,14 +426,17 @@ export function LandingPage() {
             </nav>
 
             <div className="mobile-menu__actions">
-              <Link className="btn btn-primary" href={WHATSAPP_URL} target="_blank" onClick={() => setIsMobileMenuOpen(false)}>
+              <button
+                className="btn btn-primary"
+                type="button"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setIsBookingChooserOpen(true);
+                }}
+              >
                 <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
                 <span className="cta-label cta-label--short">Garantir Sessão</span>
-              </Link>
-              <Link className="btn btn-secondary" href={WHATSAPP_URL} target="_blank" onClick={() => setIsMobileMenuOpen(false)}>
-                <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
-                <span className="cta-label cta-label--short">Garantir Sessão</span>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -944,6 +941,53 @@ export function LandingPage() {
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen
               />
+            </div>
+          </div>
+        </div>
+      ) : null}
+
+      {isBookingChooserOpen ? (
+        <div
+          className="booking-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Escolha como deseja agendar"
+          onClick={() => setIsBookingChooserOpen(false)}
+        >
+          <button className="booking-modal__backdrop" type="button" aria-label="Fechar seletor de agendamento" />
+          <div className="booking-modal__panel" onClick={(event) => event.stopPropagation()}>
+            <button
+              className="booking-modal__close"
+              type="button"
+              onClick={() => setIsBookingChooserOpen(false)}
+              aria-label="Fechar seletor de agendamento"
+            >
+              <X size={18} strokeWidth={2.4} />
+            </button>
+            <div className="booking-modal__body">
+              <span className="eyebrow">Escolha seu canal</span>
+              <h3 className="booking-modal__title">Como você quer agendar?</h3>
+              <p className="booking-modal__text">
+                Continue pelo app ou fale direto com a unidade no WhatsApp.
+              </p>
+              <div className="booking-modal__actions">
+                <Link
+                  className="btn btn-primary booking-modal__action"
+                  href={APP_BOOKING_URL}
+                  target="_blank"
+                  onClick={() => setIsBookingChooserOpen(false)}
+                >
+                  Continuar no app
+                </Link>
+                <Link
+                  className="btn btn-secondary booking-modal__action"
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  onClick={() => setIsBookingChooserOpen(false)}
+                >
+                  Falar no WhatsApp
+                </Link>
+              </div>
             </div>
           </div>
         </div>
