@@ -213,6 +213,10 @@ img {
   flex: 0 0 auto;
 }
 
+.cta-label--short {
+  display: none;
+}
+
 .topbar-action--primary {
   padding-inline: 20px;
 }
@@ -1542,7 +1546,7 @@ img {
 
   .topbar-actions {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto minmax(0, 1fr);
     justify-self: end;
     justify-content: end;
     width: 100%;
@@ -1626,6 +1630,7 @@ img {
     letter-spacing: 0.02em;
     border-radius: 14px;
     white-space: nowrap;
+    overflow: hidden;
   }
 
   .topbar-action--secondary {
@@ -1633,7 +1638,7 @@ img {
   }
 
   .topbar-action--primary {
-    width: auto;
+    width: 100%;
     min-width: 0;
     box-shadow: 0 12px 24px rgba(255, 184, 0, 0.16);
   }
@@ -1719,6 +1724,14 @@ img {
 
   .mobile-menu__actions .btn {
     width: 100%;
+  }
+
+  .cta-label--full {
+    display: none;
+  }
+
+  .cta-label--short {
+    display: inline;
   }
 
   .hero-stat-grid,
@@ -2093,28 +2106,28 @@ img {
 
 @media (max-width: 430px) {
   .hero-title {
-    font-size: clamp(1.9rem, 8.8vw, 2.65rem);
-    max-width: 11ch;
-    line-height: 0.98;
+    font-size: clamp(1.85rem, 8.2vw, 2.5rem);
+    max-width: 9.2ch;
+    line-height: 0.95;
     letter-spacing: -0.035em;
   }
 
   .topbar {
-    grid-template-columns: 72px minmax(0, 1fr);
+    grid-template-columns: 64px minmax(0, 1fr);
     gap: 8px;
-    padding: 10px;
+    padding: 10px 10px 9px;
   }
 
   .brand-logo {
-    min-width: 72px;
+    min-width: 64px;
   }
 
   .brand-logo__image {
-    height: 30px;
+    height: 28px;
   }
 
   .topbar-actions {
-    gap: 6px;
+    gap: 7px;
   }
 
   .topbar-menu-toggle,
@@ -2124,16 +2137,17 @@ img {
   }
 
   .topbar-menu-toggle {
-    padding: 8px 10px;
-    gap: 6px;
-    font-size: 0.64rem;
+    padding: 8px 11px;
+    gap: 5px;
+    font-size: 0.62rem;
     letter-spacing: 0.02em;
   }
 
   .topbar-action {
-    padding: 8px 10px;
-    font-size: 0.64rem;
-    letter-spacing: 0.01em;
+    padding: 8px 12px;
+    font-size: 0.6rem;
+    letter-spacing: 0;
+    line-height: 1;
   }
 
   .topbar-menu-toggle svg {
@@ -2143,5 +2157,25 @@ img {
 
   .topbar-action--primary {
     min-width: 0;
+  }
+
+  .hero-copy {
+    gap: 16px;
+  }
+
+  .hero-text {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .hero-actions .btn {
+    min-height: 52px;
+    padding: 14px 18px;
+    font-size: 0.78rem;
+    line-height: 1.1;
+  }
+
+  .location-card {
+    padding: 20px;
   }
 }

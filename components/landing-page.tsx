@@ -383,14 +383,16 @@ export function LandingPage() {
             href={WHATSAPP_URL}
             target="_blank"
           >
-            Garantir Minha Sessão Experimental
+            <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
+            <span className="cta-label cta-label--short">Garantir Sessão</span>
           </Link>
           <Link
             className="btn btn-primary topbar-action topbar-action--primary"
             href={WHATSAPP_URL}
             target="_blank"
           >
-            Garantir Minha Sessão Experimental
+            <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
+            <span className="cta-label cta-label--short">Garantir Sessão</span>
           </Link>
         </div>
       </header>
@@ -431,10 +433,12 @@ export function LandingPage() {
 
             <div className="mobile-menu__actions">
               <Link className="btn btn-primary" href={WHATSAPP_URL} target="_blank" onClick={() => setIsMobileMenuOpen(false)}>
-                Garantir Minha Sessão Experimental
+                <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
+                <span className="cta-label cta-label--short">Garantir Sessão</span>
               </Link>
               <Link className="btn btn-secondary" href={WHATSAPP_URL} target="_blank" onClick={() => setIsMobileMenuOpen(false)}>
-                Garantir Minha Sessão Experimental
+                <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
+                <span className="cta-label cta-label--short">Garantir Sessão</span>
               </Link>
             </div>
           </div>
@@ -458,7 +462,8 @@ export function LandingPage() {
 
             <div className="hero-actions">
               <Link className="btn btn-primary" href={WHATSAPP_URL} target="_blank">
-                Garantir Minha Sessão Experimental
+                <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
+                <span className="cta-label cta-label--short">Garantir Sessão</span>
               </Link>
               <Link className="btn btn-secondary" href="#como-funciona">
                 Como funciona
@@ -804,7 +809,9 @@ export function LandingPage() {
       <section className="content-section faq-section" id="faq">
         <div className="section-heading">
           <span className="eyebrow">Dúvidas frequentes</span>
-          <h2 className="section-title">Dúvidas Comuns (Sem Letrinhas Miúdas)</h2>
+          <h2 className="section-title">
+            Dúvidas Comuns <span className="section-title__aside">(Sem Letrinhas Miúdas)</span>
+          </h2>
           <p className="section-text">
             Ainda está na dúvida? Nós respondemos o que a maioria das pessoas pergunta antes de começar.
           </p>
@@ -835,7 +842,8 @@ export function LandingPage() {
             </p>
             <div className="hero-actions">
               <Link className="btn btn-primary" href={WHATSAPP_URL} target="_blank">
-                Garantir Minha Sessão Experimental
+                <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
+                <span className="cta-label cta-label--short">Garantir Sessão</span>
               </Link>
             </div>
             <p className="section-text">Atendimento direto com a unidade XGYM Jundiaí • SP</p>
