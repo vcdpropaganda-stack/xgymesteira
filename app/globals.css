@@ -341,7 +341,7 @@ img {
 
 .hero-section {
   position: relative;
-  padding: 44px 0 24px;
+  padding: 22px 0 10px;
   scroll-margin-top: 110px;
 }
 
@@ -359,20 +359,22 @@ img {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(460px, 0.95fr);
   align-items: center;
-  gap: 48px;
-  min-height: min(calc(100vh - 132px), 800px);
+  gap: 34px;
+  height: min(calc(100svh - 110px), 760px);
+  min-height: 0;
 }
 
 .hero-media-stack {
   position: relative;
-  min-height: min(56vw, 560px);
+  min-height: min(48vw, 500px);
 }
 
 .hero-copy {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
   justify-content: center;
+  align-self: stretch;
 }
 
 .eyebrow {
@@ -429,10 +431,16 @@ img {
 }
 
 .hero-title {
-  font-size: clamp(2.35rem, 3.85vw, 4.25rem);
-  max-width: 11.6ch;
+  font-size: clamp(2.1rem, 3.25vw, 3.8rem);
+  max-width: 10.2ch;
   line-height: 0.9;
   text-wrap: balance;
+}
+
+.hero-text {
+  max-width: 31ch;
+  font-size: 0.94rem;
+  line-height: 1.62;
 }
 
 .hero-text,
@@ -454,14 +462,14 @@ img {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
-  margin-top: 6px;
+  margin-top: 2px;
 }
 
 .location-card {
   display: grid;
   gap: 6px;
-  width: fit-content;
-  padding: 14px 18px;
+  width: min(100%, 640px);
+  padding: 12px 16px;
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -511,7 +519,7 @@ img {
 
 .device-scene {
   position: relative;
-  min-height: min(56vw, 560px);
+  min-height: min(48vw, 500px);
   perspective: 1600px;
 }
 
@@ -552,7 +560,7 @@ img {
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
-  width: 200px;
+  width: 184px;
   aspect-ratio: 9 / 16;
   display: grid;
   align-content: end;
@@ -1549,12 +1557,14 @@ img {
   }
 
   .hero-grid {
+    height: auto;
     min-height: auto;
+    gap: 28px;
   }
 
   .hero-title {
-    font-size: clamp(2.4rem, 7vw, 4.2rem);
-    max-width: 13.5ch;
+    font-size: clamp(2.2rem, 6vw, 3.7rem);
+    max-width: 12.8ch;
     line-height: 0.94;
   }
 
@@ -1563,7 +1573,7 @@ img {
   }
 
   .hero-media-stack {
-    min-height: 620px;
+    min-height: 520px;
   }
 
   .hero-video-card {
@@ -1633,9 +1643,9 @@ img {
   }
 
   .hero-title {
-    font-size: clamp(2rem, 8.5vw, 3.15rem);
-    max-width: 11.5ch;
-    line-height: 0.96;
+    font-size: clamp(1.95rem, 7.2vw, 2.85rem);
+    max-width: 13.2ch;
+    line-height: 0.94;
   }
 
   .section-title {
@@ -1657,7 +1667,7 @@ img {
   }
 
   .hero-copy {
-    gap: 18px;
+    gap: 14px;
   }
 
   .brand-logo__image {
@@ -1666,6 +1676,8 @@ img {
 
   .hero-actions .btn {
     width: 100%;
+    min-height: 52px;
+    padding: 14px 18px;
   }
 
   .feature-grid {
@@ -1994,7 +2006,7 @@ img {
 
   .device-scene {
     min-height: auto;
-    aspect-ratio: 1 / 1.08;
+    aspect-ratio: 1 / 0.96;
   }
 
   .photo-frame {
@@ -2195,9 +2207,9 @@ img {
 
 @media (max-width: 430px) {
   .hero-title {
-    font-size: clamp(1.85rem, 8.2vw, 2.5rem);
-    max-width: 9.2ch;
-    line-height: 0.95;
+    font-size: clamp(1.8rem, 6.9vw, 2.3rem);
+    max-width: 12.8ch;
+    line-height: 0.93;
     letter-spacing: -0.035em;
   }
 
@@ -2249,12 +2261,13 @@ img {
   }
 
   .hero-copy {
-    gap: 16px;
+    gap: 12px;
   }
 
   .hero-text {
-    font-size: 0.92rem;
-    line-height: 1.6;
+    max-width: none;
+    font-size: 0.9rem;
+    line-height: 1.54;
   }
 
   .hero-actions .btn {
