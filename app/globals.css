@@ -699,6 +699,10 @@ img {
   gap: 16px;
 }
 
+.benefit-swipe-hint {
+  display: none;
+}
+
 .benefit-row {
   display: grid;
   grid-template-columns: 34px minmax(0, 1fr);
@@ -1708,6 +1712,26 @@ img {
     padding: 4px 0 8px;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
+  }
+
+  .benefit-swipe-hint {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    grid-column: 1 / -1;
+    width: max-content;
+    margin: 0 auto 4px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 184, 0, 0.14);
+    color: #ffd671;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   .benefit-list::-webkit-scrollbar {

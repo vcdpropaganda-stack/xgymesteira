@@ -587,6 +587,11 @@ export function LandingPage() {
 
         <div className="benefit-layout">
           <div className="benefit-list">
+            <div className="benefit-swipe-hint" aria-hidden="true">
+              <span>&larr;</span>
+              <span>Arraste para o lado</span>
+              <span>&rarr;</span>
+            </div>
             {benefitCards.map((benefit) => (
               <div className="benefit-row reveal-left" key={benefit.text}>
                 <span className="benefit-bullet benefit-bullet--icon" aria-hidden="true">
