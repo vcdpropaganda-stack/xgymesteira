@@ -22,7 +22,8 @@ import { useEffect, useRef, useState } from "react";
 
 const WHATSAPP_URL =
   "https://api.whatsapp.com/send/?phone=5511994045454&text=ola%20quero%20agendar%20um%20horraio%20na%20esteira%20bodytech";
-const APP_BOOKING_URL = process.env.NEXT_PUBLIC_BOOKING_APP_URL || WHATSAPP_URL;
+const APP_BOOKING_URL =
+  process.env.NEXT_PUBLIC_BOOKING_APP_URL || "https://app.tecnofit.com.br/ng/online-sale/MTk4MDg4";
 const PHONE_URL = "tel:+5511994045454";
 const PHONE_LABEL = "(11) 99404-5454";
 const XGYM_ADDRESS =
@@ -160,7 +161,7 @@ function DeviceScene() {
       </div>
       <div className="floating-chip floating-chip--left">Body Shape</div>
       <div className="floating-chip floating-chip--right">XGYM</div>
-      <div className="floating-chip floating-chip--bottom">Garanta sua sessão experimental</div>
+      <div className="floating-chip floating-chip--bottom">Garanta sua sessão</div>
     </div>
   );
 }
@@ -367,7 +368,7 @@ export function LandingPage() {
           <a href="#beneficios">Benefícios</a>
           <a href="#faq">FAQ</a>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-            Garantir Minha Sessão Experimental
+            Garantir Minha Sessão
           </a>
         </nav>
 
@@ -386,7 +387,7 @@ export function LandingPage() {
             type="button"
             onClick={() => setIsBookingChooserOpen(true)}
           >
-            <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
+            <span className="cta-label cta-label--full">Garantir Minha Sessão</span>
             <span className="cta-label cta-label--short">Garantir Sessão</span>
           </button>
         </div>
@@ -435,7 +436,7 @@ export function LandingPage() {
                   setIsBookingChooserOpen(true);
                 }}
               >
-                <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
+                <span className="cta-label cta-label--full">Garantir Minha Sessão</span>
                 <span className="cta-label cta-label--short">Garantir Sessão</span>
               </button>
             </div>
@@ -460,7 +461,7 @@ export function LandingPage() {
 
             <div className="hero-actions">
               <Link className="btn btn-primary" href={WHATSAPP_URL} target="_blank">
-                <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
+                <span className="cta-label cta-label--full">Garantir Minha Sessão</span>
                 <span className="cta-label cta-label--short">Garantir Sessão</span>
               </Link>
               <Link className="btn btn-secondary" href="#como-funciona">
@@ -840,7 +841,7 @@ export function LandingPage() {
             </p>
             <div className="hero-actions">
               <Link className="btn btn-primary" href={WHATSAPP_URL} target="_blank">
-                <span className="cta-label cta-label--full">Garantir Minha Sessão Experimental</span>
+                <span className="cta-label cta-label--full">Garantir Minha Sessão</span>
                 <span className="cta-label cta-label--short">Garantir Sessão</span>
               </Link>
             </div>
